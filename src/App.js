@@ -1,25 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import MyHeader from "./components/MyHeader";
+import {Comp1, Comp2, Home} from "./screens/Home";
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import MyFooter from "./components/MyFooter";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+          <MyHeader/>
+          <div style={{paddingTop:100}} className="container modal-body">
+              <Route path="/" exact component={Home} />
+              <Route path="/1" exact component={Comp1} />
+              <Route path="/2" exact component={Comp2} />
+              <MyFooter/>
+          </div>
+      </Router>
   );
 }
 
