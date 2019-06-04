@@ -1,16 +1,19 @@
 import * as  React from 'react'
+import $ from "jquery";
+import PropTypes from 'prop-types'
+
 import logo from '../logo_horizontal_alpha.png';
 import '../App.scss'
-import $ from "jquery";
 
 class MyHeader extends React.Component {
 
     componentDidMount() {
+        window.addEventListener("scroll", this.resizeHeaderOnScroll);
+
         let j$ = $,
             $nav = j$("#navigation"),
             $slideLine = j$("#slide-line"),
-            $currentItem = j$(".current-item"),
-            $logoHeight = j$("#logo");
+            $currentItem = j$(".current-item");
 
         j$(function () {
             if ($currentItem[0]) {
@@ -29,30 +32,23 @@ class MyHeader extends React.Component {
                 },
             );
         });
+    }
 
-        this.scrollTimer = null;
-        j$(window).scroll(function () {
-            let top = j$(document).scrollTop();
-            clearTimeout(this.scrollTimer);
-            this.scrollTimer = setTimeout(
-                function () {
-                    if (top < 50) {
-                        $logoHeight.animate({height: '150px'});
-                        // j$("#navigation").animate({height: "90px"});
-                        // j$("#navigation ul li a").animate({height: "80px", padding: 30})
-                    }
-                    else {
-                        $logoHeight.animate({height: '70px'});
-                        // j$("#navigation").animate({height: "50px"});
-                        // j$("#navigation ul li a").animate({height: "40px", padding: 5})
+    resizeHeaderOnScroll() {
+        const distanceY = window.pageYOffset || document.documentElement.scrollTop,
+            shrinkOn = 20,
+            headerEl = document.getElementById("logo");
 
-                    }
-                }, 50);
-        });
+        if (distanceY > shrinkOn) {
+            headerEl.classList.add("smaller");
+        } else {
+            headerEl.classList.remove("smaller");
+        }
     }
 
 
     render() {
+        const allRefs = this.props.refs;
         return (
             <header
                 style={{backgroundColor: 'rgb(58,162,134)'}}
@@ -65,13 +61,13 @@ class MyHeader extends React.Component {
                     <div className="collapse navbar-collapse">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item active current-item">
-                                <a className="nav-link">Home</a>
+                                <a className="nav-link" onClick={() => this.props.scrollToRef(allRefs.firstRef)}>HEALTHY & DELICIOUS</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link">Features</a>
+                                <a className="nav-link" onClick={() => this.props.scrollToRef(allRefs.secRef)}>LOSE WEIGHT</a>
                             </li>
                             <li className="nav-item btn-green">
-                                <a className="nav-link btn">Pricing</a>
+                                <a className="nav-link btn" onClick={() => this.props.scrollToRef(allRefs.thRef)}>ADD MUSCLE</a>
                             </li>
                         </ul>
                         <span id="slide-line"/>
@@ -81,6 +77,11 @@ class MyHeader extends React.Component {
         )
     }
 }
+
+MyHeader.propTypes = ({
+    scrollToRef: PropTypes.func.isRequired,
+    refs: PropTypes.object.isRequired,
+});
 
 
 
