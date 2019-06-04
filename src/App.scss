@@ -113,6 +113,12 @@ body{
 
 #logo{
   height: 150px;
+  transition: height 0.3s;
+}
+
+#logo.smaller {
+  height: 75px;
+  transition: height 0.3s;
 }
 
 .img{
