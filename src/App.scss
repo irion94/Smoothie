@@ -1,0 +1,49 @@
+
+.text-link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.main-color {
+  background-color: rgb(58, 162, 134);
+}
+
+.btn-green {
+  background-color: rgb(58, 162, 134);
+  color: white;
+  border: 1px solid transparent;
+}
+
+.btn-green:hover {
+  border: 1px solid white;
+}
+
+.navButtonFontColor {
+  color: white
+}
+
+.footer {
+  color: white;
+  max-height: 100px;
+  background-color: rgb(58, 162, 134);
+}
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+
+
+#slide-line{
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color:#EF682C;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
