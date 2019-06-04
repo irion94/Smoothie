@@ -1,21 +1,47 @@
 import React from 'react';
 import MyHeader from "./components/MyHeader";
-import {Comp1, Comp2, Home} from "./screens/Home";
-import {BrowserRouter as Router, Route} from "react-router-dom";
+import {Home} from "./screens/Home";
+import {BrowserRouter as Router} from "react-router-dom";
 import MyFooter from "./components/MyFooter";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import ContentItem from "./components/ContentItem";
+import faker from "faker";
 
-function App() {
-  return (
-      <Router>
-          <MyHeader/>
-          <div style={{paddingTop:100}} className="container modal-body">
-              <Route path="/" exact component={Home} />
-              <Route path="/1" exact component={Comp1} />
-              <Route path="/2" exact component={Comp2} />
-              <MyFooter/>
-          </div>
-      </Router>
-  );
+const App = () => {
+
+    const myRef = React.createRef() // Create ref object
+
+    const scrollToRef = (ref) => ref.current && window.scrollTo(0, ref.current.offsetTop)
+
+    React.useEffect(() => { // Add to scroll after component has mounted
+        scrollToRef(myRef)
+    }, []) // passing an empty array useEffect will run only once, similar to componentDidMount
+
+    return (
+            <Router>
+                <MyHeader/>
+                <button style={{marginTop:100}} className="btn" onMouseDown={() => scrollToRef(myRef)}>
+                    lol
+                </button>
+                <div style={{paddingTop: 120, paddingLeft: 70, width: '70%'}} className="container">
+                    <ContentItem photo={'https://unsplash.it/500/300?random'} imageRight/>
+                    <ContentItem photo={'https://unsplash.it/500/300?random'}/>
+                    <ContentItem photo={'https://unsplash.it/500/300?random'} imageRight/>
+                    <ContentItem photo={faker.image.food()}/>
+                    <ContentItem photo={faker.image.food()} imageRight/>
+                    <ContentItem photo={faker.image.food()} />
+                    <ContentItem photo={faker.image.food()} imageRight/>
+                    <ContentItem photo={faker.image.food()} />
+                    <ContentItem forwardRef={myRef} photo={faker.image.food()} imageRight/>
+                    <ContentItem photo={faker.image.food()} />
+                    <div className="fixed-bottom-right">
+                        <FontAwesomeIcon icon={faEnvelope} size="2x" color='white'/>
+                    </div>z
+                </div>
+                <MyFooter/>
+            </Router>
+        );
 }
 
 export default App;
