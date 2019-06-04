@@ -38,27 +38,31 @@ class MyHeader extends React.Component {
                 function () {
                     if (top < 50) {
                         $logoHeight.animate({height: '150px'});
+                        // j$("#navigation").animate({height: "90px"});
+                        // j$("#navigation ul li a").animate({height: "80px", padding: 30})
                     }
                     else {
-                        $logoHeight.animate({height: '80px'});
+                        $logoHeight.animate({height: '70px'});
+                        // j$("#navigation").animate({height: "50px"});
+                        // j$("#navigation ul li a").animate({height: "40px", padding: 5})
+
                     }
-                }, 100);
+                }, 50);
         });
-
-
     }
+
 
     render() {
         return (
             <header
-                style={{height: 90, backgroundColor: 'rgb(58,162,134)'}}
+                style={{backgroundColor: 'rgb(58,162,134)'}}
                 className="navbar fixed-top" id="navigation"
             >
                 <div style={{marginLeft: 20, backgroundColor: 'rgb(58,162,134)'}} className="rounded row">
                     <img id="logo" src={logo} alt={"logo"}/>
                 </div>
                 <nav className="nav-fixed-top navbar-expand-sm btn-green">
-                    <div className="collapse navbar-collapse" id="navbarText">
+                    <div className="collapse navbar-collapse">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item active current-item">
                                 <a className="nav-link">Home</a>
@@ -73,25 +77,6 @@ class MyHeader extends React.Component {
                         <span id="slide-line"/>
                     </div>
                 </nav>
-                {/*<ul className="list-group-horizontal">*/}
-                {/*<li className="current-item list-inline-item">*/}
-                {/*<button*/}
-                {/*className="bg-transparent border-0 font-weight-light navButtonFontColor font-weight-bold">Add*/}
-                {/*Muscle*/}
-                {/*</button>*/}
-                {/*</li>*/}
-                {/*<li className="list-inline-item">*/}
-                {/*<button className="bg-transparent border-0 font-weight-light navButtonFontColor">Add Muscle*/}
-                {/*</button>*/}
-                {/*</li>*/}
-                {/*<li className="list-inline-item">*/}
-                {/*<button className="bg-transparent border-0 font-weight-light navButtonFontColor">Add Muscle</button>*/}
-                {/*</li>*/}
-                {/*<li className="list-inline-item">*/}
-                {/*<button className="bg-transparent border-0 font-weight-light navButtonFontColor">Add Muscle*/}
-                {/*</button>*/}
-                {/*</li>*/}
-                {/*</ul>*/}
             </header>
         )
     }

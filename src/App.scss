@@ -1,31 +1,104 @@
+// ******************************
+// Normalize (ignore me!)
+// ******************************
+$bg_color:#fff;
+$fonts:Arial,"Hiragino Kaku Gothic Pro W3",Meiryo,sans-serif;
+$font_color:#868686;
+$link_color:#868686;
+$link_hover_color:#aaa;
+$main_color: rgb(58, 162, 134);
 
-.text-link {
-  color: inherit;
-  text-decoration: inherit;
+
+body{
+  font-family:$fonts;
+  background: white;
+  background-size: cover;
+  color: $font_color;
+  text-align: center;
+  a, a:visited{
+    color: $link_color;
+    text-decoration:none;
+  }
+  a:hover{
+    color: $link_hover_color;
+  }
 }
 
-.main-color {
-  background-color: rgb(58, 162, 134);
+*, *:before, *:after{
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
 }
+// ******************************
+// End of Normalize
+// ******************************
+
+// Main Navigation
+#navigation{
+  height: 90px;
+  ul{
+    li:hover{
+      cursor:pointer;
+    }
+    li {
+      a{
+        display: inline-block;
+        padding: 30px;
+        margin: 0 10px;
+        font-size:14px;
+      }
+    }
+  }
+
+  // Sliding Underline
+  #slide-line{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color:#EF682C;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+}
+
+//.text-link {
+//  color: inherit;
+//  text-decoration: inherit;
+//}
+
+//.main-color {
+//  background-color: rgb(58, 162, 134);
+//}
 
 .btn-green {
-  background-color: rgb(58, 162, 134);
+  background-color: $main_color;
   color: white;
-  border: 1px solid transparent;
 }
 
-.btn-green:hover {
-  border: 1px solid white;
+.nav-fixed-top{
+  position: fixed;
+  top: 0;
+  right: 40px;
+  z-index: 1030;
 }
 
-.navButtonFontColor {
-  color: white
-}
+//.navButtonFontColor {
+//  color: white
+//}
 
 .footer {
   color: white;
   max-height: 100px;
   background-color: rgb(58, 162, 134);
+}
+
+//#navbar{
+//  display: flex;
+//  justify-content: space-between;
+//}
+
+#nav{
+  height: 150px;
 }
 
 .btn-circle.btn-xl {
@@ -35,15 +108,25 @@
   border-radius: 35px;
   font-size: 24px;
   line-height: 1.33;
+  background-color: #EF682C;
 }
 
+#logo{
+  height: 150px;
+}
 
+.img{
+  object-fit: fill;
+  height: inherit;
+  width: 100%;
+  flex: 1;
+}
 
-#slide-line{
-  position: absolute;
-  bottom: 0;
-  height: 2px;
-  background-color:#EF682C;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+.fixed-bottom-right{
+  position: fixed; bottom: 5%; right: 5%;
+  padding: 1%;
+  border-radius: 35px;
+  font-size: 24px;
+  line-height: 1.33;
+  background-color: $main_color;
 }
