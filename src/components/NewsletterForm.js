@@ -15,33 +15,35 @@ class NewsletterForm extends React.Component {
     }
 
     postEmail() {
-        const db = firebase.firestore();
-        db.collection('newsletter').where('email', '==', this.state.email).get()
-            .then(snapshot => {
-                if (snapshot.empty) {
-                    db.collection("newsletter").add({email: this.state.email})
-                        .then(() => {
-                            this.setState({
-                                alert: {
-                                    posted: true,
-                                    message: "We will inform you when our product will be released!"
-                                }
+        if (this.state.email !== undefined && this.state.email !== '') {
+            const db = firebase.firestore();
+            db.collection('newsletter').where('email', '==', this.state.email).get()
+                .then(snapshot => {
+                    if (snapshot.empty) {
+                        db.collection("newsletter").add({email: this.state.email})
+                            .then(() => {
+                                this.setState({
+                                    alert: {
+                                        posted: true,
+                                        message: "We will inform you when our product will be released!"
+                                    }
+                                })
                             })
-                        })
-                        .finally(() => this.setState({email: ""}))
-                        .catch(error => console.warn(error))
-                    return;
-                }
-                this.setState({
-                    alert: {
-                        posted: true,
-                        message: 'This mail is already exist in our database.'
+                            .finally(() => this.setState({email: ""}))
+                            .catch(error => console.warn(error))
+                        return;
                     }
+                    this.setState({
+                        alert: {
+                            posted: true,
+                            message: 'This mail is already exist in our database.'
+                        }
+                    });
+                })
+                .catch(err => {
+                    console.warn('Error getting documents', err);
                 });
-            })
-            .catch(err => {
-                console.warn('Error getting documents', err);
-            });
+        }
     }
 
     render() {
