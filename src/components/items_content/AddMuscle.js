@@ -1,9 +1,9 @@
 import * as React from 'react'
 
-const LooseWeight = () => {
+const AddMuscle = () => {
     return(
-        <div>
-            <h3>Loose Weight</h3>
+        <div className="text-content">
+            <h3>Add Muscle</h3>
             <p>#whenever #whatever<br/>
                 #dsth<br/>
                 #Lorem / ipsu et</p>
@@ -12,4 +12,4 @@ const LooseWeight = () => {
     )
 };
 
-export default LooseWeight
+export default AddMuscle

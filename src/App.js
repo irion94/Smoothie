@@ -3,43 +3,166 @@ import MyHeader from "./components/MyHeader";
 import MyFooter from "./components/MyFooter";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+
 import ContentItem from "./components/ContentItem";
-import HealthyContent from "./components/HealthyContent";
-import LooseWeight from "./components/LooseWeight";
-import AddMuscle from "./components/AddMuscle";
+import HealthyContent from "./components/items_content/HealthyContent";
+import LooseWeight from "./components/items_content/LooseWeight";
+import AddMuscle from "./components/items_content/AddMuscle";
+import NewsletterForm from "./components/NewsletterForm";
+import OurProduct from "./components/items_content/OurProduct";
 
-const App = () => {
+import img1 from '../src/res/smoothie1.jpg'
+import img2 from '../src/res/smoothie2.jpg'
+import img3 from '../src/res/smoothie3.jpg'
+import img4 from '../src/res/smoothie4.jpg'
+import img5 from '../src/res/smoothie5.jpg'
 
-    const allRefs = ({
-        firstRef: React.createRef(),
-        secRef: React.createRef(),
-        thRef: React.createRef(),
-    });
+class App extends React.Component {
 
-    const scrollToRef = (ref) => ref.current.scrollIntoView({behavior: 'smooth', block: 'center'});
+    constructor(props) {
+        super(props);
+        this.state = {
+            visible: false
+        };
 
-    return (
-        <div>
-            {/*Header*/}
-            <MyHeader refs={allRefs} scrollToRef={scrollToRef}/>
+        this.allRefs = ({
+            first: React.createRef(),
+            second: React.createRef(),
+            third: React.createRef(),
+            fourth: React.createRef(),
+            fifth: React.createRef(),
+        });
 
-            <div style={{paddingLeft: 70, paddingTop: 200, paddingBottom: 150, width: '70%'}} className="container-fluid">
+        this.scrollToRef = this.scrollToRef.bind(this)
+        this.handleClick = this.handleClick.bind(this);
+        this.handleOutsideClick = this.handleOutsideClick.bind(this);
+    }
 
-                {/*Content Start*/}
-                <ContentItem content={<HealthyContent/>} forwardRef={allRefs.firstRef} image={'https://api.potagercity.fr/images/fraises-box-5c927233bc8c2.jpg'} imageRight/>
-                <ContentItem content={<LooseWeight/>} forwardRef={allRefs.secRef} image={'https://media1.popsugar-assets.com/files/thumbor/YQ_UvEoQqsexsEspvJjbNL0QN-c/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2015/08/25/668/n/1922729/63679add_edit_img_cover_file_845239_1440512157_1941013_855159504576023_195416366_n/i/Smoothie-Art.jpg'}/>
-                <ContentItem content={<AddMuscle/>} forwardRef={allRefs.thRef} image={'https://feelgoodfoodie.net/wp-content/uploads/2016/10/Blueberry-Banana-Smoothie-6-400x600.jpg'} imageRight/>
+    scrollToRef = (ref) => ref.current.scrollIntoView({behavior: 'smooth', block: 'center'});
 
-                {/*Mailing Button*/}
-                <div className="fixed-bottom-right">
-                    <FontAwesomeIcon icon={faEnvelope} size="2x" color='white'/>
+    handleClick() {
+        if (!this.state.visible) {
+            document.addEventListener('click', this.handleOutsideClick, false);
+        } else {
+            document.removeEventListener('click', this.handleOutsideClick, false);
+        }
+
+        this.setState(prevState => ({
+            visible: !prevState.visible,
+        }));
+    }
+
+    handleOutsideClick(e) {
+        if (this.node.contains(e.target)) {
+            return;
+        }
+
+        this.handleClick();
+    }
+
+
+    //
+    // isBottom(el) {
+    //     return el.getBoundingClientRect().bottom <= window.innerHeight;
+    // }
+    //
+    //
+    // componentDidMount() {
+    //     document.addEventListener('scroll', this.trackScrolling);
+    // }
+    //
+    // componentWillUnmount() {
+    //     document.removeEventListener('scroll', this.trackScrolling);
+    // }
+    //
+    // trackScrolling = (e) => {
+    //     const wrappedElement = document.getElementById('bottom');
+    //     if (this.isBottom(wrappedElement)) {
+    //         console.log('header bottom reached');
+    //         this.handleClick()
+    //
+    //
+    //         //document.removeEventListener('scroll', this.trackScrolling);
+    //     }
+    // };
+
+
+    render() {
+        return (
+            <div>
+                {/*Header*/}
+                <MyHeader refs={this.allRefs} scrollToRef={this.scrollToRef}/>
+
+                <div style={{paddingLeft: 70, paddingTop: 200, paddingBottom: 150, width: '70%'}}
+                     className="container-fluid">
+
+                    {/*Content Start*/}
+                    <ContentItem
+                        forwardRef={this.allRefs.first}
+                        image={img1}
+                        imageRight
+                    >
+                        <OurProduct/>
+                    </ContentItem>
+                    <ContentItem
+                        forwardRef={this.allRefs.second}
+                        image={img2}
+                    >
+                        <HealthyContent/>
+                    </ContentItem>
+                    <ContentItem
+                        forwardRef={this.allRefs.third}
+                        image={img3}
+                        imageRight
+                    >
+                        <LooseWeight/>
+                    </ContentItem>
+                    <ContentItem
+                        forwardRef={this.allRefs.fourth}
+                        image={img4}
+                    >
+                        <AddMuscle/>
+                    </ContentItem>
+                    <ContentItem
+                        forwardRef={this.allRefs.fifth}
+                        image={img5}
+                        imageRight
+                    >
+                        <AddMuscle/>
+                    </ContentItem>
+
+                    {/*Mailing Button & Mailing Content*/}
+                    <div
+                        ref={node => {
+                            this.node = node;
+                        }}
+                        className="fixed-bottom-right"
+                    >
+                        <ReactCSSTransitionGroup
+                            transitionName="example"
+                            transitionEnterTimeout={500}
+                            transitionLeaveTimeout={500}
+                        >
+                            {
+                                this.state.visible && (
+                                    <NewsletterForm/>
+                                )
+                            }
+                        </ReactCSSTransitionGroup>
+                        <FontAwesomeIcon
+                            onMouseDown={() => this.handleClick()}
+                            icon={faEnvelope} size="2x"
+                            color='white'
+                        />
+                    </div>
+
                 </div>
-
+                {/*Footer*/}
+                <MyFooter id={"bottom"}/>
             </div>
-            {/*Footer*/}
-            <MyFooter/>
-        </div>
-    );
+        );
+    }
 };
 
 export default App;

@@ -19,7 +19,7 @@ class ContentItem extends React.Component {
             <div ref={this.props.forwardRef} className="container p-3 center">
                 <div className="row">
                     <div className={`col text-center align-self-center ${this.contentOrder}`}>
-                        {this.props.content}
+                        {this.props.children}
                     </div>
                     <div className={`col ${this.imagePosition}`}>
                         <img src={this.props.image} style={{height:500, width: 500}}
@@ -34,18 +34,12 @@ class ContentItem extends React.Component {
 
 ContentItem.propTypes = ({
     imageRight: PropTypes.bool,
-    content: PropTypes.object
+    children: PropTypes.object
 });
 
 ContentItem.defaultProps = ({
     imageRight: false,
-    content: <div>
-            <h3>Title</h3>
-            <p>#whenever #whatever<br/>
-                #dsth<br/>
-                #Lorem / ipsu et</p>
-            <a href="#">Click button!</a>
-        </div>
+    children: "Text or Content"
 });
 
 export default ContentItem

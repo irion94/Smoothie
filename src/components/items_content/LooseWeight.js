@@ -1,9 +1,9 @@
 import * as React from 'react'
 
-const HealthyContent = () => {
+const LooseWeight = () => {
     return(
-        <div>
-            <h3>Health and Delicious</h3>
+        <div className="text-content">
+            <h3>Loose Weight</h3>
             <p>#whenever #whatever<br/>
                 #dsth<br/>
                 #Lorem / ipsu et</p>
@@ -12,4 +12,4 @@ const HealthyContent = () => {
     )
 };
 
-export default HealthyContent
+export default LooseWeight
