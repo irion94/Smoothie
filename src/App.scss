@@ -61,15 +61,6 @@ body{
   }
 }
 
-//.text-link {
-//  color: inherit;
-//  text-decoration: inherit;
-//}
-
-//.main-color {
-//  background-color: rgb(58, 162, 134);
-//}
-
 .btn-green {
   background-color: $main_color;
   color: white;
@@ -82,20 +73,11 @@ body{
   z-index: 1030;
 }
 
-//.navButtonFontColor {
-//  color: white
-//}
-
 .footer {
   color: white;
   max-height: 100px;
   background-color: rgb(58, 162, 134);
 }
-
-//#navbar{
-//  display: flex;
-//  justify-content: space-between;
-//}
 
 #nav{
   height: 150px;
@@ -109,6 +91,12 @@ body{
   font-size: 24px;
   line-height: 1.33;
   background-color: #EF682C;
+}
+
+.logo-content{
+  margin-left: 20px;
+  background-color: rgb(58,162,134);
+  border-radius: 20px;
 }
 
 #logo{
@@ -129,9 +117,11 @@ body{
 }
 
 .fixed-bottom-right{
-  position: fixed; bottom: 5%; right: 5%;
+  position: fixed;
+  bottom: 8%;
+  right: 3%;
   padding: 1%;
-  border-radius: 35px;
+  border-radius: 40px;
   font-size: 24px;
   line-height: 1.33;
   background-color: $main_color;
