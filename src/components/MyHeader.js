@@ -54,7 +54,7 @@ class MyHeader extends React.Component {
                 style={{backgroundColor: 'rgb(58,162,134)'}}
                 className="navbar fixed-top" id="navigation"
             >
-                <div style={{marginLeft: 20, backgroundColor: 'rgb(58,162,134)'}} className="rounded row">
+                <div style={{marginLeft: 20, backgroundColor: 'rgb(58,162,134)'}} className="logo-content row">
                     <img id="logo" src={logo} alt={"logo"}/>
                 </div>
                 <nav className="nav-fixed-top navbar-expand-sm btn-green">
