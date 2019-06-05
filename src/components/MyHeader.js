@@ -36,7 +36,7 @@ class MyHeader extends React.Component {
 
     resizeHeaderOnScroll() {
         const distanceY = window.pageYOffset || document.documentElement.scrollTop,
-            shrinkOn = 20,
+            shrinkOn = 50,
             headerEl = document.getElementById("logo");
 
         if (distanceY > shrinkOn) {
@@ -60,14 +60,20 @@ class MyHeader extends React.Component {
                 <nav className="nav-fixed-top navbar-expand-sm btn-green">
                     <div className="collapse navbar-collapse">
                         <ul className="navbar-nav mr-auto">
-                            <li className="nav-item active current-item">
-                                <a className="nav-link" onClick={() => this.props.scrollToRef(allRefs.firstRef)}>HEALTHY & DELICIOUS</a>
+                            <li className="nav-item btn-green current-item">
+                                <a className="nav-link btn" onClick={() => this.props.scrollToRef(allRefs.first)}>OUR PRODUCTS</a>
+                            </li>
+                            <li className="nav-item active">
+                                <a className="nav-link" onClick={() => this.props.scrollToRef(allRefs.second)}>HEALTHY & DELICIOUS</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" onClick={() => this.props.scrollToRef(allRefs.secRef)}>LOSE WEIGHT</a>
+                                <a className="nav-link" onClick={() => this.props.scrollToRef(allRefs.third)}>LOSE WEIGHT</a>
                             </li>
                             <li className="nav-item btn-green">
-                                <a className="nav-link btn" onClick={() => this.props.scrollToRef(allRefs.thRef)}>ADD MUSCLE</a>
+                                <a className="nav-link btn" onClick={() => this.props.scrollToRef(allRefs.fourth)}>ADD MUSCLE</a>
+                            </li>
+                            <li className="nav-item btn-green">
+                                <a className="nav-link btn" onClick={() => this.props.scrollToRef(allRefs.fifth)}>ADD MUSCLE</a>
                             </li>
                         </ul>
                         <span id="slide-line"/>

@@ -1,9 +1,9 @@
 import * as React from 'react'
 
-const AddMuscle = () => {
+const HealthyContent = () => {
     return(
-        <div>
-            <h3>Add Muscle</h3>
+        <div className="text-content">
+            <h3>Health and Delicious</h3>
             <p>#whenever #whatever<br/>
                 #dsth<br/>
                 #Lorem / ipsu et</p>
@@ -12,4 +12,4 @@ const AddMuscle = () => {
     )
 };
 
-export default AddMuscle
+export default HealthyContent

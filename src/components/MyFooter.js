@@ -3,7 +3,7 @@ import * as  React from 'react'
 class MyFooter extends React.Component {
     render() {
         return (
-            <footer className="font-small footer w-100">
+            <footer id={this.props.id} className="font-small footer w-100">
                 <div className="modal-footer">
 
                         <h5 className="text-uppercase">Footer Content</h5>
