@@ -7,20 +7,24 @@ class NewsletterForm extends React.Component {
         super(props);
         this.state = {
             email: '',
+            loading: false,
             alert: {
                 posted: false,
                 message: ''
-            }
+            },
         }
     }
 
-    postEmail() {
-        if (this.state.email !== undefined && this.state.email !== '') {
+    postEmail(e) {
+        e.preventDefault();
+        this.setState({loading: true})
+        const email = this.state.email;
+        if (email !== undefined && /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email)) {
             const db = firebase.firestore();
-            db.collection('newsletter').where('email', '==', this.state.email).get()
+            db.collection('newsletter').where('email', '==', email).get()
                 .then(snapshot => {
                     if (snapshot.empty) {
-                        db.collection("newsletter").add({email: this.state.email})
+                        db.collection("newsletter").add({email: email})
                             .then(() => {
                                 this.setState({
                                     alert: {
@@ -29,7 +33,9 @@ class NewsletterForm extends React.Component {
                                     }
                                 })
                             })
-                            .finally(() => this.setState({email: ""}))
+                            .finally(() => {
+                                this.setState({email: "", loading: false});
+                            })
                             .catch(error => console.warn(error))
                         return;
                     }
@@ -59,7 +65,11 @@ class NewsletterForm extends React.Component {
                                 <input onChange={(e) => this.setState({email: e.target.value})} type="email"
                                        placeholder="Type your Email" required/>
                                 <br/>
-                                <button onClick={() => this.postEmail()}>Subscribe</button>
+                                <button disabled={this.state.loading} onClick={(e) => this.postEmail(e)}>
+                                    {
+                                        this.state.loading ? "Loading" : "Subscribe"
+                                    }
+                                </button>
                             </form>
                         </div> :
                         <div id="container">
