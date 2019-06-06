@@ -31,7 +31,7 @@ class App extends React.Component {
             fifth: React.createRef(),
         });
 
-        this.scrollToRef = this.scrollToRef.bind(this)
+        this.scrollToRef = this.scrollToRef.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleOutsideClick = this.handleOutsideClick.bind(this);
     }
@@ -64,9 +64,7 @@ class App extends React.Component {
                 {/*Header*/}
                 <MyHeader refs={this.allRefs} scrollToRef={this.scrollToRef}/>
 
-                <div
-                     className="content"
-                >
+                <div className="content">
 
                     {/*Content Start*/}
                     <ContentItem
@@ -90,6 +88,7 @@ class App extends React.Component {
                             ]}
                         />
                     </ContentItem>
+
                     <ContentItem
                         forwardRef={this.allRefs.second}
                         image={img2}
@@ -110,11 +109,13 @@ class App extends React.Component {
                             ]}
                         />
                     </ContentItem>
+
                     <ContentItem
                         forwardRef={this.allRefs.third}
                         image={img3}
                         imageRight
                     >
+                        {/*Loose Weight*/}
                         <TextContent
                             column
                             textAlign={"left"}
@@ -131,10 +132,12 @@ class App extends React.Component {
                             ]}
                         />
                     </ContentItem>
+
                     <ContentItem
                         forwardRef={this.allRefs.fourth}
                         image={img4}
                     >
+                        {/*Add Muscle*/}
                         <TextContent
                             textAlign={"left"}
                             title={"Add Muscle"}
@@ -150,11 +153,13 @@ class App extends React.Component {
                             ]}
                         />
                     </ContentItem>
+
                     <ContentItem
                         forwardRef={this.allRefs.fifth}
                         image={img5}
                         imageRight
                     >
+                        {/*About us*/}
                         <TextContent
                             column
                             textAlign={"left"}
@@ -190,6 +195,7 @@ class App extends React.Component {
                                 )
                             }
                         </ReactCSSTransitionGroup>
+
                         <FontAwesomeIcon
                             onMouseDown={() => this.handleClick()}
                             icon={faEnvelope} size="2x"
@@ -203,6 +209,6 @@ class App extends React.Component {
             </div>
         );
     }
-};
+}
 
 export default App;
