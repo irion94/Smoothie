@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types'
 import firebase from '../../src/firebase_config.js'
 
 class NewsletterForm extends React.Component {
@@ -79,12 +78,6 @@ class NewsletterForm extends React.Component {
             </div>
         );
     }
-};
-
-NewsletterForm.propTypes = ({
-    imageRight: PropTypes.bool,
-    content: PropTypes.object
-});
-
+}
 
 export default NewsletterForm;

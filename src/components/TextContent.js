@@ -7,7 +7,7 @@ const TextContent = ({content, title, column, textAlign, titleStyle, subtitleSty
         <div className="row justify-content-center p-lg-5">
             {
                 content.map((el, index) =>
-                    <div key={index} className={`${column ? "col" : null} text-${textAlign}`}>
+                    <div key={index} className={`${column && "col"} text-${textAlign}`}>
                         <h4 style={subtitleStyle}>{el.subtitle}</h4>
                         <p>{el.text}</p>
                     </div>
