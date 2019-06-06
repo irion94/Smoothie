@@ -2,7 +2,7 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 
 const ContentItem = ({image, imageRight, forwardRef, children}) => (
-    <div ref={forwardRef} className="container p-3 center">
+    <div ref={forwardRef} className="container p-3 center content-item">
         <div className="row align-items-center">
             <div className={`col text-center align-self-center ${imageRight ? 'order-0' : 'order-1'}`}> {children} </div>
             <div className={`col ${imageRight ? 'order-1' : 'order-0'}`}>

@@ -28,9 +28,14 @@ body{
 }
 // End of Normalize
 
+#root{
+  min-width: 1300px;
+}
+
 // Main Navigation
 #navigation{
   height: 90px;
+  min-width: 1250px;
   ul{
     li:hover{
       cursor:pointer;
@@ -122,6 +127,16 @@ body{
   font-size: 24px;
   line-height: 1.33;
   background-color: $main_color;
+}
+
+.content{
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
+.content-item{
+  margin-top: 5rem;
+  margin-bottom: 1rem;
 }
 
 //newsletter content animation

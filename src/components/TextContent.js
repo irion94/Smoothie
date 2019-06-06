@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 const TextContent = ({content, title, column, textAlign, titleStyle, subtitleStyle}) => (
     <div className="text-content">
         <h3 style={titleStyle}>{title}</h3>
-        <div className="row pt-5 justify-content-center">
+        <div className="row justify-content-center p-lg-5">
             {
-                content.map((el) =>
-                    <div className={`${column ? "col" : null} text-${textAlign}`}>
+                content.map((el, index) =>
+                    <div key={index} className={`${column ? "col" : null} text-${textAlign}`}>
                         <h4 style={subtitleStyle}>{el.subtitle}</h4>
                         <p>{el.text}</p>
                     </div>
