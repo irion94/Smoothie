@@ -1,6 +1,18 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 
+/**
+ *
+ * @param content: array, contain objects with subtitle and text fields.
+ * @param title: string, title of content.
+ * @param column: bool, if true content is arranged according to columns.
+ * @param textAlign: string, define text-align (left, center, right...)
+ * @param titleStyle: object, define title style
+ * @param subtitleStyle
+ * @returns {*}
+ * @constructor
+ */
+
 const TextContent = ({content, title, column, textAlign, titleStyle, subtitleStyle}) => (
     <div className="text-content">
         <h3 style={titleStyle}>{title}</h3>
