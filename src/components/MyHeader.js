@@ -48,7 +48,7 @@ class MyHeader extends React.Component {
 
 
     render() {
-        const allRefs = this.props.refs;
+        const {scrollToRef, refs} = this.props;
         return (
             <header
                 style={{backgroundColor: 'rgb(58,162,134)'}}
@@ -61,19 +61,19 @@ class MyHeader extends React.Component {
                     <div className="collapse navbar-collapse">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item current-item">
-                                <a className="nav-link btn" onClick={() => this.props.scrollToRef(allRefs.first)}>OUR PRODUCTS</a>
+                                <a className="nav-link btn" onClick={() => scrollToRef(refs.first)}>OUR PRODUCTS</a>
                             </li>
                             <li className="nav-item active">
-                                <a className="nav-link" onClick={() => this.props.scrollToRef(allRefs.second)}>HEALTHY & DELICIOUS</a>
+                                <a className="nav-link" onClick={() => scrollToRef(refs.second)}>HEALTHY & DELICIOUS</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" onClick={() => this.props.scrollToRef(allRefs.third)}>LOSE WEIGHT</a>
+                                <a className="nav-link" onClick={() => scrollToRef(refs.third)}>LOSE WEIGHT</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" onClick={() => this.props.scrollToRef(allRefs.fourth)}>ADD MUSCLE</a>
+                                <a className="nav-link" onClick={() => scrollToRef(refs.fourth)}>ADD MUSCLE</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link btn" onClick={() => this.props.scrollToRef(allRefs.fifth)}>ABOUT US</a>
+                                <a className="nav-link btn" onClick={() => scrollToRef(refs.fifth)}>ABOUT US</a>
                             </li>
                         </ul>
                         <span id="slide-line"/>
