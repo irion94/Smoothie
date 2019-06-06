@@ -60,7 +60,7 @@ class MyHeader extends React.Component {
                 <nav className="nav-fixed-top navbar-expand-sm btn-green">
                     <div className="collapse navbar-collapse">
                         <ul className="navbar-nav mr-auto">
-                            <li className="nav-item btn-green current-item">
+                            <li className="nav-item current-item">
                                 <a className="nav-link btn" onClick={() => this.props.scrollToRef(allRefs.first)}>OUR PRODUCTS</a>
                             </li>
                             <li className="nav-item active">
@@ -69,10 +69,10 @@ class MyHeader extends React.Component {
                             <li className="nav-item">
                                 <a className="nav-link" onClick={() => this.props.scrollToRef(allRefs.third)}>LOSE WEIGHT</a>
                             </li>
-                            <li className="nav-item btn-green">
-                                <a className="nav-link btn" onClick={() => this.props.scrollToRef(allRefs.fourth)}>ADD MUSCLE</a>
+                            <li className="nav-item">
+                                <a className="nav-link" onClick={() => this.props.scrollToRef(allRefs.fourth)}>ADD MUSCLE</a>
                             </li>
-                            <li className="nav-item btn-green">
+                            <li className="nav-item">
                                 <a className="nav-link btn" onClick={() => this.props.scrollToRef(allRefs.fifth)}>ABOUT US</a>
                             </li>
                         </ul>

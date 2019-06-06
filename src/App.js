@@ -64,8 +64,9 @@ class App extends React.Component {
                 {/*Header*/}
                 <MyHeader refs={this.allRefs} scrollToRef={this.scrollToRef}/>
 
-                <div style={{paddingLeft: 70, paddingTop: 200, paddingBottom: 150, width: '70%'}}
-                     className="container-fluid">
+                <div
+                     className="content"
+                >
 
                     {/*Content Start*/}
                     <ContentItem
