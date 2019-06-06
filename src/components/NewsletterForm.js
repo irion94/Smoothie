@@ -17,16 +17,16 @@ class NewsletterForm extends React.Component {
 
     postEmail(e) {
         e.preventDefault();
-        this.setState({loading: true})
         const email = this.state.email;
         if (email !== undefined && /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email)) {
+            this.setState({loading: true});
             const db = firebase.firestore();
-            db.collection('newsletter').where('email', '==', email).get()
+            db.collection('newsletter').where('email', '==', email).get() //check in db if email exist
                 .then(snapshot => {
                     if (snapshot.empty) {
-                        db.collection("newsletter").add({email: email})
+                        db.collection("newsletter").add({email: email}) //if not, create it
                             .then(() => {
-                                this.setState({
+                                this.setState({ //change message in window
                                     alert: {
                                         posted: true,
                                         message: "We will inform you when our product will be released!"
@@ -34,12 +34,11 @@ class NewsletterForm extends React.Component {
                                 })
                             })
                             .finally(() => {
-                                this.setState({email: "", loading: false});
+                                this.setState({email: "", loading: false}); //reset state
                             })
                             .catch(error => console.warn(error))
-                        return;
                     }
-                    this.setState({
+                    else this.setState({ //else show message
                         alert: {
                             posted: true,
                             message: 'This mail is already exist in our database.'
@@ -54,7 +53,7 @@ class NewsletterForm extends React.Component {
 
     render() {
         return (
-            <div ref={this.props.forwardRef} style={{padding: 300}} className="p-3 center fixed-bottom-right">
+            <div ref={this.props.forwardRef} className="p-3 center fixed-bottom-right">
                 {
                     !this.state.alert.posted ?
                         <div id="container">

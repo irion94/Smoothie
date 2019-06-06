@@ -6,17 +6,14 @@ import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 import ContentItem from "./components/ContentItem";
-import HealthyContent from "./components/items_content/HealthyContent";
-import LooseWeight from "./components/items_content/LooseWeight";
-import AddMuscle from "./components/items_content/AddMuscle";
 import NewsletterForm from "./components/NewsletterForm";
-import OurProduct from "./components/items_content/OurProduct";
 
-import img1 from '../src/res/smoothie1.jpg'
-import img2 from '../src/res/smoothie2.jpg'
-import img3 from '../src/res/smoothie3.jpg'
-import img4 from '../src/res/smoothie4.jpg'
-import img5 from '../src/res/smoothie5.jpg'
+import img1 from './assets/smoothie1.jpg'
+import img2 from './assets/smoothie2.jpg'
+import img3 from './assets/smoothie3.jpg'
+import img4 from './assets/smoothie4.jpg'
+import img5 from './assets/smoothie5.jpg'
+import TextContent from "./components/TextContent";
 
 class App extends React.Component {
 
@@ -61,33 +58,6 @@ class App extends React.Component {
         this.handleClick();
     }
 
-
-    //
-    // isBottom(el) {
-    //     return el.getBoundingClientRect().bottom <= window.innerHeight;
-    // }
-    //
-    //
-    // componentDidMount() {
-    //     document.addEventListener('scroll', this.trackScrolling);
-    // }
-    //
-    // componentWillUnmount() {
-    //     document.removeEventListener('scroll', this.trackScrolling);
-    // }
-    //
-    // trackScrolling = (e) => {
-    //     const wrappedElement = document.getElementById('bottom');
-    //     if (this.isBottom(wrappedElement)) {
-    //         console.log('header bottom reached');
-    //         this.handleClick()
-    //
-    //
-    //         //document.removeEventListener('scroll', this.trackScrolling);
-    //     }
-    // };
-
-
     render() {
         return (
             <div>
@@ -103,33 +73,102 @@ class App extends React.Component {
                         image={img1}
                         imageRight
                     >
-                        <OurProduct/>
+                        {/*<OurProduct/>*/}
+                        <TextContent
+                            column
+                            title={"Our Products"}
+                            content={[
+                                {
+                                    subtitle: "Lorem ipsu",
+                                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac libero nibh. Morbi condimentum elit non urna pharetra tincidunt et id erat. Maecenas pharetra ante vitae purus sollicitudin, gravida porta elit pellentesque."
+                                },
+                                {
+                                    subtitle: "Lorem ipsu",
+                                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac libero nibh. Morbi condimentum elit non urna pharetra tincidunt et id erat. Maecenas pharetra ante vitae purus sollicitudin, gravida porta elit pellentesque."
+                                }
+                            ]}
+                        />
                     </ContentItem>
                     <ContentItem
                         forwardRef={this.allRefs.second}
                         image={img2}
                     >
-                        <HealthyContent/>
+                        {/*Healthy*/}
+                        <TextContent
+                            textAlign={"center"}
+                            title={"Health and Delicious"}
+                            content={[
+                                {
+                                    subtitle: "Lorem ipsu",
+                                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac libero nibh. Morbi condimentum elit non urna pharetra tincidunt et id erat. Maecenas pharetra ante vitae purus sollicitudin, gravida porta elit pellentesque."
+                                },
+                                {
+                                    subtitle: "Lorem ipsu",
+                                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac libero nibh. Morbi condimentum elit non urna pharetra tincidunt et id erat. Maecenas pharetra ante vitae purus sollicitudin, gravida porta elit pellentesque."
+                                }
+                            ]}
+                        />
                     </ContentItem>
                     <ContentItem
                         forwardRef={this.allRefs.third}
                         image={img3}
                         imageRight
                     >
-                        <LooseWeight/>
+                        <TextContent
+                            column
+                            textAlign={"left"}
+                            title={"Loose Weight"}
+                            content={[
+                                {
+                                    subtitle: "Lorem ipsu",
+                                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac libero nibh. Morbi condimentum elit non urna pharetra tincidunt et id erat. Maecenas pharetra ante vitae purus sollicitudin, gravida porta elit pellentesque."
+                                },
+                                {
+                                    subtitle: "Lorem ipsu",
+                                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac libero nibh. Morbi condimentum elit non urna pharetra tincidunt et id erat. Maecenas pharetra ante vitae purus sollicitudin, gravida porta elit pellentesque."
+                                }
+                            ]}
+                        />
                     </ContentItem>
                     <ContentItem
                         forwardRef={this.allRefs.fourth}
                         image={img4}
                     >
-                        <AddMuscle/>
+                        <TextContent
+                            textAlign={"left"}
+                            title={"Add Muscle"}
+                            content={[
+                                {
+                                    subtitle: "Lorem ipsu",
+                                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac libero nibh. Morbi condimentum elit non urna pharetra tincidunt et id erat. Maecenas pharetra ante vitae purus sollicitudin, gravida porta elit pellentesque."
+                                },
+                                {
+                                    subtitle: "Lorem ipsu",
+                                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac libero nibh. Morbi condimentum elit non urna pharetra tincidunt et id erat. Maecenas pharetra ante vitae purus sollicitudin, gravida porta elit pellentesque."
+                                }
+                            ]}
+                        />
                     </ContentItem>
                     <ContentItem
                         forwardRef={this.allRefs.fifth}
                         image={img5}
                         imageRight
                     >
-                        <AddMuscle/>
+                        <TextContent
+                            column
+                            textAlign={"left"}
+                            title={"About us"}
+                            content={[
+                                {
+                                    subtitle: "Lorem ipsu",
+                                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                                },
+                                {
+                                    subtitle: "Lorem ipsu",
+                                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                                }
+                            ]}
+                        />
                     </ContentItem>
 
                     {/*Mailing Button & Mailing Content*/}

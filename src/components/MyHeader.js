@@ -2,8 +2,8 @@ import * as  React from 'react'
 import $ from "jquery";
 import PropTypes from 'prop-types'
 
-import logo from '../logo_horizontal_alpha.png';
-import '../App.scss'
+import logo from '../assets/logo_horizontal_alpha.png';
+import '../styles/App.scss'
 
 class MyHeader extends React.Component {
 
@@ -73,7 +73,7 @@ class MyHeader extends React.Component {
                                 <a className="nav-link btn" onClick={() => this.props.scrollToRef(allRefs.fourth)}>ADD MUSCLE</a>
                             </li>
                             <li className="nav-item btn-green">
-                                <a className="nav-link btn" onClick={() => this.props.scrollToRef(allRefs.fifth)}>ADD MUSCLE</a>
+                                <a className="nav-link btn" onClick={() => this.props.scrollToRef(allRefs.fifth)}>ABOUT US</a>
                             </li>
                         </ul>
                         <span id="slide-line"/>
