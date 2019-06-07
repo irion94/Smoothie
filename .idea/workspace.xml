@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e62f205c-6ed4-4e0e-8b67-d44be207eda0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/MyHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/HomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/App.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,12 +31,12 @@
           <entry key="gitignore" value="1" />
           <entry key="html" value="2" />
           <entry key="ico" value="1" />
-          <entry key="js" value="40" />
+          <entry key="js" value="43" />
           <entry key="json" value="6" />
           <entry key="md" value="1" />
           <entry key="png" value="2" />
           <entry key="rnc" value="1" />
-          <entry key="scss" value="6" />
+          <entry key="scss" value="7" />
           <entry key="svg" value="1" />
           <entry key="ts" value="1" />
         </counts>
@@ -45,11 +47,11 @@
           <entry key="HTML" value="2" />
           <entry key="Image" value="3" />
           <entry key="JSON" value="6" />
-          <entry key="JavaScript" value="41" />
+          <entry key="JavaScript" value="44" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="RNG Compact" value="1" />
-          <entry key="SCSS" value="6" />
+          <entry key="SCSS" value="7" />
           <entry key="SVG" value="1" />
           <entry key="TypeScript" value="1" />
         </counts>
@@ -65,9 +67,9 @@
           <entry key="MyBody" value="84" />
           <entry key="css" value="332" />
           <entry key="html" value="16" />
-          <entry key="js" value="19003" />
+          <entry key="js" value="19091" />
           <entry key="json" value="34" />
-          <entry key="scss" value="1748" />
+          <entry key="scss" value="1885" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -75,22 +77,52 @@
           <entry key="CSS" value="332" />
           <entry key="HTML" value="16" />
           <entry key="JSON" value="34" />
-          <entry key="JavaScript" value="19087" />
-          <entry key="SCSS" value="1748" />
+          <entry key="JavaScript" value="19175" />
+          <entry key="SCSS" value="1885" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/NewsletterForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="447">
+              <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/MyHeader.js">
+        <entry file="file://$PROJECT_DIR$/src/styles/App.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="482">
+              <caret line="256" column="27" selection-start-line="256" selection-start-column="27" selection-end-line="256" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/screens/HomePage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="194" column="29" lean-forward="true" selection-start-line="194" selection-start-column="29" selection-end-line="194" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/firebase_config.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
+              <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -110,12 +142,13 @@
       <find>id=&quot;na</find>
       <find>id=&quot;nav</find>
       <find>photo</find>
-      <find>h2</find>
       <find>li</find>
       <find>jest</find>
       <find>h3</find>
       <find>mailing</find>
       <find>allRefs</find>
+      <find>h2</find>
+      <find>maili</find>
     </findStrings>
     <replaceStrings>
       <replace>image</replace>
@@ -153,18 +186,18 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/src/components/ContentItem.js" />
         <option value="$PROJECT_DIR$/src/components/MyFooter.js" />
-        <option value="$PROJECT_DIR$/src/components/NewsletterForm.js" />
         <option value="$PROJECT_DIR$/src/test/AppTest.js" />
         <option value="$PROJECT_DIR$/src/screens/App.js" />
         <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/styles/App.scss" />
         <option value="$PROJECT_DIR$/src/components/TextContent.js" />
-        <option value="$PROJECT_DIR$/src/screens/HomePage.js" />
         <option value="$PROJECT_DIR$/public/manifest.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/MyHeader.js" />
+        <option value="$PROJECT_DIR$/src/components/NewsletterForm.js" />
+        <option value="$PROJECT_DIR$/src/screens/HomePage.js" />
+        <option value="$PROJECT_DIR$/src/styles/App.scss" />
       </list>
     </option>
   </component>
@@ -227,7 +260,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="Con&#9;FILE&#9;file:///Users/irion94/smoothie_delight/src/components/ContentItem.js&#10;head&#9;FILE&#9;file:///Users/irion94/smoothie_delight/src/components/MyHeader.js&#10;app&#9;FILE&#9;file:///Users/irion94/smoothie_delight/src/App.js&#10;news&#9;FILE&#9;file:///Users/irion94/smoothie_delight/src/components/NewsletterForm.js&#10;new&#9;FILE&#9;file:///Users/irion94/smoothie_delight/src/components/NewsletterForm.js&#10;a&#9;FILE&#9;file:///Users/irion94/smoothie_delight/src/App.scss&#10;Foote&#9;FILE&#9;file:///Users/irion94/smoothie_delight/src/components/MyFooter.js&#10;Foot&#9;FILE&#9;file:///Users/irion94/smoothie_delight/src/components/MyFooter.js" />
+    <property name="SearchEverywhereHistoryKey" value="Home&#9;FILE&#9;file:///Users/irion94/smoothie_delight/src/screens/HomePage.js&#10;Con&#9;FILE&#9;file:///Users/irion94/smoothie_delight/src/components/ContentItem.js&#10;head&#9;FILE&#9;file:///Users/irion94/smoothie_delight/src/components/MyHeader.js&#10;app&#9;FILE&#9;file:///Users/irion94/smoothie_delight/src/App.js&#10;news&#9;FILE&#9;file:///Users/irion94/smoothie_delight/src/components/NewsletterForm.js&#10;new&#9;FILE&#9;file:///Users/irion94/smoothie_delight/src/components/NewsletterForm.js&#10;a&#9;FILE&#9;file:///Users/irion94/smoothie_delight/src/App.scss&#10;Foote&#9;FILE&#9;file:///Users/irion94/smoothie_delight/src/components/MyFooter.js&#10;Foot&#9;FILE&#9;file:///Users/irion94/smoothie_delight/src/components/MyFooter.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -290,7 +323,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559461118600</updated>
-      <workItem from="1559461121083" duration="107536000" />
+      <workItem from="1559461121083" duration="109840000" />
     </task>
     <servers />
   </component>
@@ -300,7 +333,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107536000" />
+    <option name="totallyTimeSpent" value="109840000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -308,11 +341,11 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.12417119" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.12417119" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.26632652" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.26632652" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32959184" />
       <window_info anchor="bottom" id="Message" order="4" />
@@ -441,13 +474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/firebase_config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/items_content/AddMuscle.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -512,13 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/NewsletterForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/AppTest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -572,13 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/App.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1815">
-          <caret line="121" column="20" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -619,23 +631,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/HomePage.js">
+    <entry file="file://$PROJECT_DIR$/src/components/MyHeader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1755">
-          <caret line="117" column="42" selection-start-line="117" selection-start-column="42" selection-end-line="117" selection-end-column="42" />
+        <state relative-caret-position="-389">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/firebase_config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/NewsletterForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MyHeader.js">
+    <entry file="file://$PROJECT_DIR$/src/screens/HomePage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        <state relative-caret-position="372">
+          <caret line="194" column="29" lean-forward="true" selection-start-line="194" selection-start-column="29" selection-end-line="194" selection-end-column="29" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/App.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="256" column="27" selection-start-line="256" selection-start-column="27" selection-end-line="256" selection-end-column="27" />
         </state>
       </provider>
     </entry>
