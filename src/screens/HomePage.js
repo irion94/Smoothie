@@ -196,8 +196,10 @@ class HomePage extends React.Component {
                         </ReactCSSTransitionGroup>
 
                         <FontAwesomeIcon
+                            id="mailing-button"
                             onMouseDown={() => this.handleClick()}
-                            icon={faEnvelope} size="2x"
+                            icon={faEnvelope}
+                            size="2x"
                             color='white'
                         />
                     </div>

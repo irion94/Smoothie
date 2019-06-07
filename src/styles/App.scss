@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web');
 // Normalize
 $bg_color:#fff;
 $font_color:#868686;
@@ -128,6 +128,10 @@ body{
   font-size: 24px;
   line-height: 1.33;
   background-color: $main_color;
+
+  #mailing-button :hover{
+    cursor:pointer;
+  }
 }
 
 .content{
@@ -161,10 +165,8 @@ body{
 
 
 //newsletter content
-@import url('https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web');
-
 #container{
-  box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+  box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.4);
   text-align: center;
   border-radius: 20px;
   margin: 3em auto;
@@ -175,18 +177,18 @@ body{
 }
 
 #container h2 {
-  background: black;
+  background: #6a6a6a;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   font-family: "Comic Sans MS", serif;
   letter-spacing: 2px;
-  font-size: 3.5em;
+  font-size: 3em;
   margin: 0;
 }
 
 #container p {
   font-family: 'Farsan', cursive;
-  margin: 3px 0 1.5em 0;
+  margin: 30px 0 1em 0;
   font-size: 1.3em;
   color: #7d7d7d;
 }
@@ -237,14 +239,14 @@ body{
 
 .text-content{
   h3{
-    font-family: "Comic Sans MS";
+    font-family: "Comic Sans MS", serif;
     font-weight: bold;
     font-size: 2.7em;
     color: rgba(58, 162, 134, 0.7);
   }
 
   h4{
-    font-family: "Comic Sans MS";
+    font-family: "Comic Sans MS", serif;
     font-weight: 500;
     font-size: 1.8em;
     font-style: italic;
