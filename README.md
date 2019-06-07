@@ -1,5 +1,5 @@
 # Smoothie Delight
-This is a simple SPA website created using Reactjs ang Google Firebase.<br>The content is available at this address: [smoothie-delight.herokuapp.com](https://smoothie-delight.herokuapp.com/)
+This is a simple SPA website created using Reactjs ang Google Firebase.<br>Preview is available at this address: [smoothie-delight.herokuapp.com](https://smoothie-delight.herokuapp.com/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
