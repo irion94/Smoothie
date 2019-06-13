@@ -28,9 +28,9 @@ body{
 }
 // End of Normalize
 
-#root{
-  min-width: 1300px;
-}
+//#root{
+//  min-width: 1300px;
+//}
 
 // Main Navigation
 #navigation{
@@ -99,6 +99,7 @@ body{
   margin-left: 20px;
   background-color: $main_color;
   border-radius: 20px;
+  width: fit-content;
 }
 
 #logo{

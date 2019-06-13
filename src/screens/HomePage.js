@@ -14,6 +14,7 @@ import img3 from '../assets/smoothie3.jpg'
 import img4 from '../assets/smoothie4.jpg'
 import img5 from '../assets/smoothie5.jpg'
 import TextContent from "../components/TextContent";
+import HeaderLogo from "../components/HeaderLogo";
 
 class HomePage extends React.Component {
 
@@ -62,9 +63,10 @@ class HomePage extends React.Component {
         return (
             <div>
                 {/*Header*/}
+                <HeaderLogo/>
                 <MyHeader refs={this.allRefs} scrollToRef={this.scrollToRef}/>
 
-                <div className="content">
+                <div>
 
                     {/*Content Start*/}
                     <ContentItem

@@ -34,32 +34,15 @@ class MyHeader extends React.Component {
         });
     }
 
-    resizeHeaderOnScroll() {
-        const distanceY = window.pageYOffset || document.documentElement.scrollTop,
-            shrinkOn = 50,
-            headerEl = document.getElementById("logo");
-
-        if (distanceY > shrinkOn) {
-            headerEl.classList.add("smaller");
-        } else {
-            headerEl.classList.remove("smaller");
-        }
-    }
 
 
     render() {
         const {scrollToRef, refs} = this.props;
         return (
-            <header
-                style={{backgroundColor: 'rgb(58,162,134)'}}
-                className="navbar fixed-top" id="navigation"
-            >
-                <div style={{marginLeft: 20, backgroundColor: 'rgb(58,162,134)'}} className="logo-content row">
-                    <img id="logo" src={logo} alt={"logo"}/>
-                </div>
-                <nav className="nav-fixed-top navbar-expand-sm btn-green">
-                    <div className="collapse navbar-collapse">
-                        <ul className="navbar-nav mr-auto">
+
+                <nav id="navigation" className="sticky-top btn-green w-100">
+                    <div className="float-right">
+                        <ul className="flex-row navbar-nav mr-auto">
                             <li className="nav-item current-item">
                                 <a className="nav-link btn" onClick={() => scrollToRef(refs.first)}>OUR PRODUCTS</a>
                             </li>
@@ -79,7 +62,6 @@ class MyHeader extends React.Component {
                         <span id="slide-line"/>
                     </div>
                 </nav>
-            </header>
         )
     }
 }
