@@ -4,6 +4,7 @@ import MyFooter from "../components/MyFooter";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import $ from 'jquery'
 
 import ContentItem from "../components/ContentItem";
 import NewsletterForm from "../components/NewsletterForm";
@@ -15,6 +16,8 @@ import img4 from '../assets/smoothie4.jpg'
 import img5 from '../assets/smoothie5.jpg'
 import TextContent from "../components/TextContent";
 import HeaderLogo from "../components/HeaderLogo";
+
+import '../styles/App.scss'
 
 class HomePage extends React.Component {
 
@@ -59,17 +62,41 @@ class HomePage extends React.Component {
         this.handleClick();
     }
 
+    componentDidMount(){
+        let j$ = $,
+            $slideLine = j$("#slide-line");
+
+        const sections = $('#sections').children()
+            , nav = $('ul')
+            , nav_height = nav.outerHeight();
+
+
+        $(window).on('scroll', function () {
+            const cur_pos = $(this).scrollTop();
+            sections.each(function() {
+                const top = $(this).offset().top - nav_height *  8,
+                    bottom = top + $(this).outerHeight();
+
+                if (cur_pos >= top && cur_pos <= bottom) {
+                    $slideLine.css({
+                        "width": nav.find('li[id='+$(this).attr('id')+']').width(),
+                        "left": nav.find('li[id='+$(this).attr('id')+']').position().left
+                    });
+                }
+            });
+        });
+    }
+
     render() {
         return (
             <div>
                 {/*Header*/}
                 <HeaderLogo/>
                 <MyHeader refs={this.allRefs} scrollToRef={this.scrollToRef}/>
-
-                <div>
-
+                <div id="sections" className="container">
                     {/*Content Start*/}
                     <ContentItem
+                        id="1"
                         forwardRef={this.allRefs.first}
                         image={img1}
                         imageRight
@@ -92,6 +119,7 @@ class HomePage extends React.Component {
                     </ContentItem>
 
                     <ContentItem
+                        id="2"
                         forwardRef={this.allRefs.second}
                         image={img2}
                     >
@@ -113,6 +141,7 @@ class HomePage extends React.Component {
                     </ContentItem>
 
                     <ContentItem
+                        id="3"
                         forwardRef={this.allRefs.third}
                         image={img3}
                         imageRight
@@ -136,6 +165,7 @@ class HomePage extends React.Component {
                     </ContentItem>
 
                     <ContentItem
+                        id="4"
                         forwardRef={this.allRefs.fourth}
                         image={img4}
                     >
@@ -157,6 +187,7 @@ class HomePage extends React.Component {
                     </ContentItem>
 
                     <ContentItem
+                        id="5"
                         forwardRef={this.allRefs.fifth}
                         image={img5}
                         imageRight
@@ -205,7 +236,6 @@ class HomePage extends React.Component {
                             color='white'
                         />
                     </div>
-
                 </div>
                 {/*Footer*/}
                 <MyFooter id={"bottom"}/>

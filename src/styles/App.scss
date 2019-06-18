@@ -67,14 +67,6 @@ body{
   color: white;
 }
 
-.nav-fixed-top{
-  position: fixed;
-  top: 0;
-  right: 40px;
-  z-index: 1030;
-  height: inherit;
-}
-
 .footer {
   color: white;
   max-height: 100px;
@@ -257,4 +249,8 @@ body{
   p{
     font-family: Chalkboard;
   }
+}
+
+.active{
+  color: red;
 }
