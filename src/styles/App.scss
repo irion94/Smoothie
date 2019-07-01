@@ -28,9 +28,9 @@ body{
 }
 // End of Normalize
 
-#root{
-  min-width: 1300px;
-}
+//#root{
+//  min-width: 1300px;
+//}
 
 // Main Navigation
 #navigation{
@@ -67,14 +67,6 @@ body{
   color: white;
 }
 
-.nav-fixed-top{
-  position: fixed;
-  top: 0;
-  right: 40px;
-  z-index: 1030;
-  height: inherit;
-}
-
 .footer {
   color: white;
   max-height: 100px;
@@ -99,6 +91,7 @@ body{
   margin-left: 20px;
   background-color: $main_color;
   border-radius: 20px;
+  width: fit-content;
 }
 
 #logo{
@@ -256,4 +249,8 @@ body{
   p{
     font-family: Chalkboard;
   }
+}
+
+.active{
+  color: red;
 }
