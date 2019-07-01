@@ -8,7 +8,6 @@ class MyHeader extends React.Component {
 
     componentDidMount() {
         let j$ = $,
-            $nav = j$("#navigation"),
             $slideLine = j$("#slide-line"),
             $currentItem = j$(".current-item");
 
@@ -19,15 +18,6 @@ class MyHeader extends React.Component {
                     "left": $currentItem.position().left
                 });
             }
-
-            j$($nav).find("li").click(
-                function () {
-                    $slideLine.css({
-                        "width": j$(this).width(),
-                        "left": j$(this).position().left
-                    });
-                },
-            );
         });
     }
 
